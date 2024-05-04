@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react";
+// src/pages/Movie.js
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function Movie() {
+  const { id } = useParams();
+
+  // Fetch movie data based on id
+
   return (
-    <>
-      <header>
-        {/* What component should go here? */}
-      </header>
-      <main>
-        {/* Movie info here! */}
-      </main>
-    </>
+    <div>
+      <h1>Movie Page</h1>
+      <p>Movie ID: {id}</p>
+      {/* Fetch and render movie details here */}
+    </div>
   );
-};
+}
 
 export default Movie;

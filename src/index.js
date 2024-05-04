@@ -1,7 +1,19 @@
-import "./index.css";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import routes from "./routes";
+// src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createBrowserRouter, RouterProvider } from '@remix-run/react';
+import routes from './routes';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render();
+function App() {
+  return (
+    <RouterProvider router={createBrowserRouter()}>
+      {routes}
+    </RouterProvider>
+  );
+}
+
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
+
+
+
